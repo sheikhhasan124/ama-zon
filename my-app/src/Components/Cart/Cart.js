@@ -9,8 +9,9 @@ console.log(cart)
       total= total + product.price;
       shipping = shipping + product.shipping;
    }
-let tax = (total*0.2).toFixed(2);
-
+//    toFixed give a strign so it should be convert into number 
+let tax = parseFloat((total*0.2).toFixed(2));
+let grandTotal =  total + shipping + tax;
 
 
     return (
@@ -20,7 +21,7 @@ let tax = (total*0.2).toFixed(2);
             <p>price{total}</p>
             <p>tax{tax}</p>
             <p>shipping{shipping}</p>
-            <h4>grand total</h4>
+            <h4>grand total${grandTotal.toFixed(2)}</h4>
         </div>
     );
 };
