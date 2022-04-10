@@ -20,6 +20,7 @@ const storedCart = getStoreCart()
 for(let id in storedCart){
     const addedProduct = products.find(product=> product.id === id)
     console.log(addedProduct)
+    // setCart(addedProduct)
 }
 },[])
 
